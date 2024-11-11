@@ -117,31 +117,30 @@ a=" ${CYAN}ACCOUNT"
 clear
 
 echo -e " "
-echo -e " ${z}====================================================${NC}"
-echo -e " ${z}│$NC$purple                ${Bold}INFORMATION VPS                  $NC${z} │$NC"
-echo -e " ${z}====================================================${NC}"
-echo -e " ${z}====================================================${NC}"
-echo -e " ${z}│$NC${z} System OS ${NC}     $Blue=$NC $MODEL${NC}"
-echo -e " ${z}│$NC${z} Core System ${NC}   $Blue=$NC $CORE${NC}"
-echo -e " ${z}│$NC${z} Server RAM ${NC}    $Blue=$NC $uram/$RAM MB $NC"
-echo -e " ${z}│$NC${z} Uptime Server ${NC} $Blue=$NC $SERONLINE${NC}"
-echo -e " ${z}│$NC${z} IP/Domain ${NC}     $Blue=$NC ${domain}/${IPVPS}${NC}"
-echo -e " ${z}│$NC${z} ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
-echo -e " ${z}====================================================${NC}"
-echo -e " ${z}        ┌──────────────────────────────────┐${NC}"
+echo -e " ${NC}====================================================${NC}" | lolcat
+echo -e "\e[37;44m              AUTOSCRIPT RIOT STORE                      \033[0m"
+echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${y}System OS ${NC}     $Blue=$NC $MODEL${NC}"
+echo -e " ${y}Core System ${NC}   $Blue=$NC $CORE${NC}"
+echo -e " ${y}Server RAM ${NC}    $Blue=$NC $uram/$RAM MB $NC"
+echo -e " ${y}Uptime Server ${NC} $Blue=$NC $SERONLINE${NC}"
+echo -e " ${y}IP/Domain ${NC}     $Blue=$NC ${domain}/${IPVPS}${NC}"
+echo -e " ${y}ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
+echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${NC}        ┌──────────────────────────────────┐${NC}"  | lolcat
 echo -e "              SSH/OVPN    $y:$NC $ssh1  $a${NC}"
 echo -e "              VMESS       $y:$NC $vma  $a${NC}"
 echo -e "              VLESS       $y:$NC $vla  $a${NC}"
 echo -e "              TROJAN      $y:$NC $trb  $a${NC}"    
 echo -e "              SHADOWSOCKS $y:$NC $ssa  $a${NC}" 
-echo -e " ${z}        └──────────────────────────────────┘${NC}"
-echo -e " ${z}====================================================${NC}"
-echo -e " ${z}│$NC${z} Version$NC       ${Blue}=${NC}${YELL} v${versiedition} LTS Rev.1"
-echo -e " ${z}│$NC${z} User$NC          ${Blue}=$NC $username $sts"
-echo -e " ${z}│$NC${z} Expiry script$NC ${Blue}=${green} $certifacate Days$NC "
-echo -e " ${z}====================================================${NC}"
-echo -e " ${z} ────────────────────────────────────────────────── ${NC}"
+echo -e " ${NC}        └──────────────────────────────────┘${NC}"  | lolcat
+echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${y}Version$NC       ${Blue}=${NC}${YELL} v${versiedition} LTS Rev.1"
+echo -e " ${y}User$NC          ${Blue}=$NC $username $sts"
+echo -e " ${y}Expiry script$NC ${Blue}=${green} $certifacate Days$NC "
+echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${NC} ────────────────────────────────────────────────── ${NC}"  | lolcat
 echo -e "           to access use$YELL ☞$green menu$NC commands"
 echo -e "               ${Blue}[*]$y SCRIPT : $cekupdateinfo"
-echo -e " ${z} ────────────────────────────────────────────────── ${NC}"
+echo -e " ${NC} ────────────────────────────────────────────────── ${NC}"  | lolcat
 echo -e ""
