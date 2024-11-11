@@ -117,23 +117,23 @@ a=" ${CYAN}ACCOUNT"
 clear
 
 echo -e " "
-echo -e " ${NC}====================================================${NC}" | lolcat
+echo -e " ${NC}======================================================${NC}" | lolcat
 echo -e " \e[37;44m              AUTOSCRIPT RIOT STORE                   \033[0m"
-echo -e " ${NC}====================================================${NC}" | lolcat
-echo -e " ${y}System OS ${NC}     $Blue=$NC $MODEL${NC}"
-echo -e " ${y}Core System ${NC}   $Blue=$NC $CORE${NC}"
-echo -e " ${y}Server RAM ${NC}    $Blue=$NC $uram/$RAM MB $NC"
-echo -e " ${y}Uptime Server ${NC} $Blue=$NC $SERONLINE${NC}"
-echo -e " ${y}IP/Domain ${NC}     $Blue=$NC ${domain}/${IPVPS}${NC}"
-echo -e " ${y}ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
-echo -e " ${y}Version$NC       ${Blue}=${NC}${YELL} v${versiedition} LTS Rev.1"
-echo -e " ${y}User$NC          ${Blue}=$NC $username $sts"
-echo -e " ${y}Expiry script$NC ${Blue}=${green} $certifacate Days$NC "
-echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${NC}======================================================${NC}" | lolcat
+echo -e " ${NC}System OS       $MODEL${NC}" | lolcat
+echo -e " ${NC}Core System     $CORE${NC}" | lolcat
+echo -e " ${NC}Server RAM      $uram/$RAM MB $NC" | lolcat
+echo -e " ${NC}Uptime Server   $SERONLINE${NC}" | lolcat
+echo -e " ${NC}IP/Domain       ${domain}/${IPVPS}${NC}" | lolcat
+echo -e " ${NC}ISP/CITY        ${ISP}/${CITY}${NC}" | lolcat
+echo -e " ${NC}Version        v${versiedition} LTS Rev.1" | lolcat
+echo -e " ${NC}User           $username $sts" | lolcat
+echo -e " ${NC}Expiry script  $certifacate Days$NC " | lolcat
+echo -e " ${NC}======================================================${NC}"  | lolcat
 echo -e " ${NC}SSH/OVPN [$ssh1] VMESS [$vma] VLESS [$vla] TROJAN [$trb] SSOCKS [$ssa]${NC}" | lolcat
-echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${NC}======================================================${NC}"  | lolcat
 echo -e " ${NC} ────────────────────────────────────────────────── ${NC}"  | lolcat
 echo -e "           to access use$YELL ☞$green menu$NC commands"
-echo -e "               ${Blue}[*]$y SCRIPT : $cekupdateinfo"
+echo -e "               ${NC}[*]$y SCRIPT : $cekupdateinfo" | lolcat
 echo -e " ${NC} ────────────────────────────────────────────────── ${NC}"  | lolcat
 echo -e ""
