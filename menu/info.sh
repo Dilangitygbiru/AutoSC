@@ -120,15 +120,15 @@ echo -e " "
 echo -e " ${NC}======================================================${NC}" | lolcat
 echo -e " \e[37;44m              AUTOSCRIPT RIOT STORE                   \033[0m"
 echo -e " ${NC}======================================================${NC}" | lolcat
-echo -e " ${NC}System OS       $MODEL${NC}" | lolcat
-echo -e " ${NC}Core System     $CORE${NC}" | lolcat
-echo -e " ${NC}Server RAM      $uram/$RAM MB $NC" | lolcat
-echo -e " ${NC}Uptime Server   $SERONLINE${NC}" | lolcat
-echo -e " ${NC}IP/Domain       ${domain}/${IPVPS}${NC}" | lolcat
-echo -e " ${NC}ISP/CITY        ${ISP}/${CITY}${NC}" | lolcat
-echo -e " ${NC}Version        v${versiedition} LTS Rev.1" | lolcat
-echo -e " ${NC}User           $username $sts" | lolcat
-echo -e " ${NC}Expiry script  $certifacate Days$NC " | lolcat
+echo -e " ${NC}System OS       :$MODEL${NC}" | lolcat
+echo -e " ${NC}Core System     :$CORE${NC}" | lolcat
+echo -e " ${NC}Server RAM      :$uram/$RAM MB $NC" | lolcat
+echo -e " ${NC}Uptime Server   :$SERONLINE${NC}" | lolcat
+echo -e " ${NC}IP/Domain       :${domain}/${IPVPS}${NC}" | lolcat
+echo -e " ${NC}ISP/CITY        :${ISP}/${CITY}${NC}" | lolcat
+echo -e " ${NC}Version        :v${versiedition} LTS Rev.1" | lolcat
+echo -e " ${NC}User           :$username $sts" | lolcat
+echo -e " ${NC}Expiry script  :$certifacate Days$NC " | lolcat
 echo -e " ${NC}======================================================${NC}"  | lolcat
 echo -e " ${NC}SSH/OVPN [$ssh1] VMESS [$vma] VLESS [$vla] TROJAN [$trb] SSOCKS [$ssa]${NC}" | lolcat
 echo -e " ${NC}======================================================${NC}"  | lolcat
