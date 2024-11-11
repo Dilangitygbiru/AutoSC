@@ -126,21 +126,72 @@ echo -e " ${y}Server RAM ${NC}    $Blue=$NC $uram/$RAM MB $NC"
 echo -e " ${y}Uptime Server ${NC} $Blue=$NC $SERONLINE${NC}"
 echo -e " ${y}IP/Domain ${NC}     $Blue=$NC ${domain}/${IPVPS}${NC}"
 echo -e " ${y}ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
-echo -e " ${NC}====================================================${NC}"  | lolcat
-echo -e " ${NC}        ┌──────────────────────────────────┐${NC}"  | lolcat
-echo -e "              SSH/OVPN    $y:$NC $ssh1  $a${NC}"
-echo -e "              VMESS       $y:$NC $vma  $a${NC}"
-echo -e "              VLESS       $y:$NC $vla  $a${NC}"
-echo -e "              TROJAN      $y:$NC $trb  $a${NC}"    
-echo -e "              SHADOWSOCKS $y:$NC $ssa  $a${NC}" 
-echo -e " ${NC}        └──────────────────────────────────┘${NC}"  | lolcat
-echo -e " ${NC}====================================================${NC}"  | lolcat
 echo -e " ${y}Version$NC       ${Blue}=${NC}${YELL} v${versiedition} LTS Rev.1"
 echo -e " ${y}User$NC          ${Blue}=$NC $username $sts"
 echo -e " ${y}Expiry script$NC ${Blue}=${green} $certifacate Days$NC "
+echo -e " ${NC}====================================================${NC}"  | lolcat
+echo -e " ${NC}SSH/OVPN [$ssh1] VMESS [$vma] VLESS [$vla] TROJAN [$trb] SHADOWSOCKS [$ssa]${NC}"  | lolcat
 echo -e " ${NC}====================================================${NC}"  | lolcat
 echo -e " ${NC} ────────────────────────────────────────────────── ${NC}"  | lolcat
 echo -e "           to access use$YELL ☞$green menu$NC commands"
 echo -e "               ${Blue}[*]$y SCRIPT : $cekupdateinfo"
 echo -e " ${NC} ────────────────────────────────────────────────── ${NC}"  | lolcat
+echo -e " ${z}    $NC [${y}01${NC}].${biru} SSH MENU$NC       $NC [${y}06${NC}].${biru} FEATURE MENU$NC"
+echo -e " ${z}    $NC [${y}02${NC}].${biru} VMESS MENU$NC     $NC [${y}07${NC}].${biru} BOT PANEL MENU$NC"
+echo -e " ${z}    $NC [${y}03${NC}].${biru} VLESS MENU$NC     $NC [${y}08${NC}].${biru} BRAND NAME MENU$NC"
+echo -e " ${z}    $NC [${y}04${NC}].${biru} TROJAN MENU$NC    $NC [${y}09${NC}].${biru} UPDATE MENU$NC"
+echo -e " ${z}    $NC [${y}05${NC}].${biru} SHADOW MENU$NC    $NC [${y}10${NC}].${biru} EXIT TO MENU$NC"
+echo -e " ${NC}====================================================${NC}" | lolcat
 echo -e ""
+read -p " Select menu [ 1-10 ]: " opt
+echo -e ""
+case $opt in
+1 | 01)
+   clear
+   m-sshws
+   ;;
+2 | 02)
+   clear
+   m-vmess
+   ;;
+3 | 03)
+   clear
+   m-vless
+   ;;
+4 | 04)
+   clear
+   m-trojan
+   ;;
+5 | 05)
+   clear
+   m-ssws
+   ;;
+6 | 06)
+   clear
+   setingsmenu
+   ;;
+7 | 07)
+   clear
+   add-bot-panel
+   ;;
+8 | 08)
+   clear
+   brandname
+   ;;
+9 | 09)
+   clear
+   updateall
+   ;;
+10 | 10)
+   clear
+   figlet STORE
+   exit
+   ;;
+x)
+   menu
+   ;;
+*)
+   echo -e "   Ops No Menu Choice, Please Try Again!"
+   exit
+   ;;
+esac
