@@ -1,0 +1,127 @@
+#!/bin/bash
+
+##Color
+z="\033[96m"
+ORANGE='\033[0;33m'
+NC='\033[0m'
+RED="\033[31m"
+PURPLE='\e[35m'
+biru="\033[0;36m"
+
+##Function
+function createaccount(){
+    clear
+
+    echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+    echo -e "      $z          CREATE ACCOUNT              $NC"
+    echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+    echo -e ""
+    read -p "   Username : " username
+    read -p "   Password : " pass
+    read -p "   Expired(days) : " exp
+    echo -e ""
+
+    ##Jalankan Script
+    noobzvpns --add-user $username $pass --expired-user $username $exp
+    sleep 2
+
+    clear
+    echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+    echo -e "$z        MENU NOOBZ              $NC"
+    echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+    echo -e "   Username      : $username"
+    echo -e "   Password      : $pass"
+    echo -e "   Expired(days) : $exp"
+    echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+    echo -e "   Payload :"
+    echo -e "   GET wss://BUG.COM/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
+    echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+    echo -e "   Account Create By RIOT Tunneling Panel"
+}
+
+function deletaccount(){
+    clear
+
+    echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+    echo -e "      $z          DELETE ACCOUNT              $NC"
+    echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+    echo -e ""
+    echo -e "   Input Username : " input
+    echo -e ""
+    if [ -z $input ]; then
+        echo -e "  Input Null, Please Corect Username and Try Again!"
+    else
+        echo -e "  Please Waiting...."
+        noobzvpns --remove-user $input
+        echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+        echo -e "$z        SUCCESS DELETE              $NC"
+        echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+        echo -e "   Username : $input"
+        echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+    fi
+}
+
+function renewaccount(){
+    clear
+
+    echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+    echo -e "      $z          RENEW ACCOUNT              $NC"
+    echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+    echo -e ""
+    echo -e "   Input Username : " input
+    echo -e "   Expired(days)  : " exp
+    echo -e ""
+    if [ -z $input ]; then
+        echo -e "  Input Null, Please Corect Username and Try Again!"
+    else
+        echo -e "  Please Waiting...."
+        noobzvpns --remove-user $input
+        echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+        echo -e "$z        SUCCESS RENEW              $NC"
+        echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+        echo -e "   Username : $input"
+        echo -e "   Expired(days) : $exp"
+        echo -e " ${ORANGE} ────────────────────────────── ${NC}"
+    fi
+}
+
+clear
+echo -e " ${ORANGE}┌──────────────────────────────────────────┐${NC}"
+echo -e "      $z           MENU NOOBZ              $NC"
+echo -e " ${ORANGE}└──────────────────────────────────────────┘${NC}"
+echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+echo -e "  ${ORANGE} [01].${NC}${biru} Creating Account Noobz${NC}"
+echo -e "  ${ORANGE} [02].${NC}${biru} Trial Account Noobz${NC}"
+echo -e "  ${ORANGE} [03].${NC}${biru} Delete Account Noobz${NC}"
+echo -e "  ${ORANGE} [04].${NC}${biru} Renew Account Noobz${NC}"
+echo -e "  ${ORANGE} [05].${NC}${biru} Show Account Noobz${NC}"
+echo -e ""
+echo -e "  ${ORANGE} [06].${NC}${biru} Exit Menu${NC}"
+echo -e " ${ORANGE} ────────────────────────────────────────── ${NC}"
+read -p "Select From Options [ 1 - 6 ] : " menu
+case $menu in
+    01 | 1)
+    clear
+    createaccount
+    ;;
+    02 | 2)
+    clear
+    trialaccount
+    ;;
+    03 | 3)
+    clear
+    deletaccount
+    ;;
+    04 | 4)
+    clear
+    renewaccount
+    ;;
+    05 | 5)
+    clear
+    showaccount
+    ;;
+    *)
+    echo -e " ${ORANGE}Wrong Input Number, Please Try Again!${NC}"
+    m-noob
+    ;;
+esac
