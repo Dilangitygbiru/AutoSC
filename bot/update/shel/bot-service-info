@@ -1,0 +1,64 @@
+#!/bin/bash
+ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+dropbear_service=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+haproxy_service=$(systemctl status haproxy | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+xray_service=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+nginx_service=$(systemctl status nginx | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#Status | Geo Project
+
+# STATUS SERVICE  SSH 
+if [[ $ssh_service == "running" ]]; then 
+   status_ssh="🟢ON"
+else
+   status_ssh="🔴OFF "
+fi
+
+# // SSH Websocket Proxy
+ssh_ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $ssh_ws == "running" ]]; then
+    status_ws_epro="🟢ON"
+else
+    status_ws_epro="🔴OFF "
+fi
+
+# STATUS SERVICE HAPROXY
+if [[ $haproxy_service == "running" ]]; then 
+   status_haproxy="🟢ON"
+else
+   status_haproxy="🔴OFF "
+fi
+
+# STATUS SERVICE XRAY
+if [[ $xray_service == "running" ]]; then 
+   status_xray="🟢ON"
+else
+   status_xray="🔴OFF "
+fi
+
+# STATUS SERVICE NGINX
+if [[ $nginx_service == "running" ]]; then 
+   status_nginx="🟢ON"
+else
+   status_nginx="🔴OFF "
+fi
+
+# STATUS SERVICE Dropbear
+if [[ $dropbear_service == "running" ]]; then 
+   status_dropbear="🟢ON"
+else
+   status_dropbear="🔴OFF"
+fi
+
+echo -e " __Note: **Restart all Service**__"
+echo -e " __if service OFF__"
+echo -e "**──────────────────────**"
+echo -e "   Status Service   "
+echo -e "**──────────────────────**"
+echo -e "**┌────────────────────┐**"
+echo -e "HAPROXY : $status_haproxy"
+echo -e "SSH     : $status_ssh"
+echo -e "WSe-Pro : $status_ws_epro"
+echo -e "XRAY    : $status_xray"
+echo -e "Nginx   : $status_nginx"
+echo -e "Dropbear: $status_dropbear"
+echo -e "**└────────────────────┘**"

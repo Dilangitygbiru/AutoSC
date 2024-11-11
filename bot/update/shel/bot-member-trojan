@@ -1,0 +1,15 @@
+#!/bin/bash
+# //====================================================
+# //	System Request:Debian 9+/Ubuntu 18.04+/20+
+# //	Author:	hermawandi64@gmail.com
+# //====================================================
+                echo -e "──────────────────────────────"
+                echo -e "  Username         Expired"
+                echo -e "──────────────────────────────"
+                data=( `cat /etc/xray/config.json | grep '#!' | cut -d ' ' -f 2 | sort | uniq`);
+            for akun in "${data[@]}"; do
+                expired=$(grep -wE "^#! $akun" "/etc/xray/config.json" | cut -d ' ' -f 3 | uniq)
+
+                printf "  %-13s %-7s %-8s %2s\n"    "${akun}" "   ${expired}"
+            done
+                echo -e "──────────────────────────────"
