@@ -369,12 +369,12 @@ echo -e " "
 echo -e " ${NC}====================================================${NC}" | lolcat
 echo -e "\e[37;44m                     RIOT STORE                      \033[0m"
 echo -e " ${NC}====================================================${NC}" | lolcat
-echo -e "${z} System OS ${NC}     $Blue=$NC $MODEL${NC}"
-echo -e "${z} Core System ${NC}   $Blue=$NC $CORE${NC}"
-echo -e "${z} Server RAM ${NC}    $Blue=$NC $uram/$RAM MB $NC"
-echo -e "${z} Uptime Server ${NC} $Blue=$NC $SERONLINE${NC}"
-echo -e "${z} IP/Domain ${NC}     $Blue=$NC ${domain}/${IPVPS}${NC}"
-echo -e "${z} ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
+echo -e "${y} System OS ${NC}     $Blue=$NC $MODEL${NC}"
+echo -e "${y} Core System ${NC}   $Blue=$NC $CORE${NC}"
+echo -e "${y} Server RAM ${NC}    $Blue=$NC $uram/$RAM MB $NC"
+echo -e "${y} Uptime Server ${NC} $Blue=$NC $SERONLINE${NC}"
+echo -e "${y} IP/Domain ${NC}     $Blue=$NC ${domain}/${IPVPS}${NC}"
+echo -e "${y} ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
 echo -e " ${NC}====================================================${NC}" | lolcat
 echo -e " ${NC}${z} SSH$NC : $status_ssh" "${z} NGINX$NC : $status_nginx" "${z} XRAY$NC : $status_xray $NC" " ${z}|${NC} ${green}  RUNNING  $NC${z}│$NC"
 echo -e " ${NC}====================================================${NC}" | lolcat
