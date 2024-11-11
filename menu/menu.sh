@@ -389,7 +389,7 @@ echo -e " ${y} User$NC          ${Blue}=$NC $username $sts"
 echo -e " ${y} Expiry script$NC ${Blue}=${green} $certifacate Days$NC "
 echo -e " ${NC}====================================================${NC}" | lolcat
 echo -e ""
-read -p " Select menu [ 1-10 ]: " opt
+read -p " Pilih menu [ 1-10 ]: " opt
 echo -e ""
 case $opt in
 1 | 01)
