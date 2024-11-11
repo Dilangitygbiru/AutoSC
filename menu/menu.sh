@@ -378,11 +378,11 @@ echo -e "${y} ISP/CITY ${NC}      $Blue=$NC ${ISP}/${CITY}${NC}"
 echo -e " ${NC}====================================================${NC}" | lolcat
 echo -e " ${NC}${z} SSH$NC : $status_ssh" "${z} NGINX$NC : $status_nginx" "${z} XRAY$NC : $status_xray $NC" " ${z}|${NC} ${green}  RUNNING  $NC${z}│$NC"
 echo -e " ${NC}====================================================${NC}" | lolcat
-echo -e " ${y}    $NC [${y}01${NC}].${biru} SSH MENU$NC       $NC [${y}06${NC}].${biru} FEATURE MENU$NC"
-echo -e " ${y}    $NC [${y}02${NC}].${biru} VMESS MENU$NC     $NC [${y}07${NC}].${biru} BOT PANEL MENU$NC"
-echo -e " ${y}    $NC [${y}03${NC}].${biru} VLESS MENU$NC     $NC [${y}08${NC}].${biru} BRAND NAME MENU$NC"
-echo -e " ${y}    $NC [${y}04${NC}].${biru} TROJAN MENU$NC    $NC [${y}09${NC}].${biru} UPDATE MENU$NC"
-echo -e " ${y}    $NC [${y}05${NC}].${biru} SHADOW MENU$NC    $NC [${y}10${NC}].${biru} EXIT TO MENU$NC"
+echo -e " ${y}    $NC [${y}01${NC}].${y} SSH MENU$NC       $NC [${y}06${NC}].${biru} FEATURE MENU$NC"
+echo -e " ${y}    $NC [${y}02${NC}].${y} VMESS MENU$NC     $NC [${y}07${NC}].${biru} BOT PANEL MENU$NC"
+echo -e " ${y}    $NC [${y}03${NC}].${y} VLESS MENU$NC     $NC [${y}08${NC}].${biru} BRAND NAME MENU$NC"
+echo -e " ${y}    $NC [${y}04${NC}].${y} TROJAN MENU$NC    $NC [${y}09${NC}].${biru} UPDATE MENU$NC"
+echo -e " ${y}    $NC [${y}05${NC}].${y} SHADOW MENU$NC    $NC [${y}10${NC}].${biru} EXIT TO MENU$NC"
 echo -e " ${NC}====================================================${NC}" | lolcat
 echo -e " ${y} Version$NC       ${Blue}=${NC}${YELL} v${versiedition} LTS Rev.1 $cekupdateinfo"
 echo -e " ${y} User$NC          ${Blue}=$NC $username $sts"
